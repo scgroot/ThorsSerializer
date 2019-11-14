@@ -489,6 +489,11 @@ struct GetAllocationType<std::unique_ptr<T>>
 {
     using AllocType = T;
 };
+template<typename T>
+struct GetAllocationType<std::shared_ptr<T>>
+{
+    using AllocType = T;
+};
 
 /*
  */
